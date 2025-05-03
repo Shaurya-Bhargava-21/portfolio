@@ -1,4 +1,3 @@
-/* hero.module.css */
 .hero {
   position: relative;
   height: 100vh;
@@ -21,12 +20,18 @@
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+.firstName, .lastName {
+  display: inline-block;
   flex-wrap: wrap;
 }
 
 .letter {
   display: inline-block;
   color: var(--neutral-900);
+  font-size: 2rem;
 }
 
 .subtitle {
@@ -103,42 +108,47 @@
   font-size: 0.875rem;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
   .hero {
     padding-top: 80px;
     height: auto;
     min-height: 100vh;
   }
-  
+
   .subtitle {
     font-size: 1.25rem;
   }
-  
+
   .description {
     font-size: 1rem;
   }
-  
+
   .shape1 {
     width: 200px;
     height: 200px;
   }
-  
+
   .shape2 {
     width: 150px;
     height: 150px;
   }
-  
+
   .shape3 {
     width: 100px;
     height: 100px;
   }
 }
 
-@media (max-width: 480px) {
-  .buttons {
-    flex-direction: column;
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
+/* Mobile breakpoint for max-width 380px */
+@media (max-width: 380px) {
+  .name {
+    flex-direction: column; /* Stack the name components vertically */
+    gap: 1rem; /* Space between first and last name */
+  }
+  
+  .firstName, .lastName {
+    display: flex;
+    justify-content: center;
   }
 }
