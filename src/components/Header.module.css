@@ -1,5 +1,4 @@
 /* header.module.css */
-
 .header {
   position: fixed;
   top: 0;
@@ -15,10 +14,6 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: var(--space-2) 0;
-}
-
-.dark-theme .scrolled {
-  background-color: rgba(17, 24, 39, 0.95);
 }
 
 .container {
@@ -87,27 +82,7 @@
   background-color: var(--primary-500);
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-}
-
-.themeToggle {
-  background: none;
-  border: none;
-  color: var(--neutral-800);
-  font-size: 1.25rem;
-  cursor: pointer;
-  padding: var(--space-2);
-  border-radius: 50%;
-  transition: background-color var(--transition-normal);
-}
-
-.themeToggle:hover {
-  background-color: var(--neutral-100);
-}
-
+/* Hamburger Button */
 .menuToggle {
   display: none;
   background: none;
@@ -117,12 +92,13 @@
   cursor: pointer;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .menuToggle {
     display: block;
     z-index: 110;
   }
-  
+
   .nav {
     position: fixed;
     top: 0;
@@ -138,30 +114,26 @@
     justify-content: center;
   }
 
-  .dark-theme .nav {
-    background-color: var(--neutral-900);
-  }
-  
   .nav.open {
     transform: translateX(0);
   }
-  
+
   .navList {
     flex-direction: column;
     gap: var(--space-6);
     margin-top: 100px;
   }
-  
+
   .navItem {
     text-align: center;
   }
-  
+
   .navLink {
     font-size: 1.25rem;
     padding: var(--space-2);
     display: block;
   }
-  
+
   .navLink.active::after {
     display: none;
   }
