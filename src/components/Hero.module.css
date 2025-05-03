@@ -1,0 +1,144 @@
+/* hero.module.css */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--space-4);
+  overflow: hidden;
+}
+
+.content {
+  max-width: 800px;
+  text-align: center;
+  z-index: 2;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.letter {
+  display: inline-block;
+  color: var(--neutral-900);
+}
+
+.subtitle {
+  color: var(--primary-500);
+  margin-bottom: var(--space-4);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.description {
+  margin-bottom: var(--space-5);
+  color: var(--neutral-700);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape1 {
+  top: 15%;
+  right: 15%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, rgba(110, 68, 255, 0.15), transparent 70%);
+}
+
+.shape2 {
+  bottom: 20%;
+  left: 10%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at center, rgba(0, 102, 204, 0.1), transparent 70%);
+}
+
+.shape3 {
+  top: 40%;
+  left: 20%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, rgba(255, 107, 53, 0.08), transparent 70%);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .shape1 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .shape2 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .shape3 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}

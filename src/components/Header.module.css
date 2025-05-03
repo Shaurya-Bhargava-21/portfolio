@@ -1,0 +1,168 @@
+/* header.module.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: var(--space-3) 0;
+  transition: background-color var(--transition-normal), box-shadow var(--transition-normal), padding var(--transition-normal);
+}
+
+.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: var(--space-2) 0;
+}
+
+.dark-theme .scrolled {
+  background-color: rgba(17, 24, 39, 0.95);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--neutral-900);
+}
+
+.logoCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: var(--space-4);
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  color: var(--neutral-700);
+  font-weight: 500;
+  padding: var(--space-1) var(--space-2);
+  transition: color var(--transition-normal);
+}
+
+.navLink:hover {
+  color: var(--primary-500);
+}
+
+.navLink.active {
+  color: var(--primary-500);
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: var(--primary-500);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  color: var(--neutral-800);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: 50%;
+  transition: background-color var(--transition-normal);
+}
+
+.themeToggle:hover {
+  background-color: var(--neutral-100);
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--neutral-800);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+    z-index: 110;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    z-index: 105;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dark-theme .nav {
+    background-color: var(--neutral-900);
+  }
+  
+  .nav.open {
+    transform: translateX(0);
+  }
+  
+  .navList {
+    flex-direction: column;
+    gap: var(--space-6);
+    margin-top: 100px;
+  }
+  
+  .navItem {
+    text-align: center;
+  }
+  
+  .navLink {
+    font-size: 1.25rem;
+    padding: var(--space-2);
+    display: block;
+  }
+  
+  .navLink.active::after {
+    display: none;
+  }
+}

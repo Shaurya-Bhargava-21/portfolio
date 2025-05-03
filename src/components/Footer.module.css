@@ -1,0 +1,138 @@
+/* Footer.module.css */
+
+.footer {
+  background-color: var(--neutral-900);
+  color: var(--neutral-200);
+  padding: var(--space-7) 0 var(--space-4);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.footerBrand {
+  max-width: 350px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: var(--space-3);
+}
+
+.logoCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+}
+
+.footerBrand p {
+  color: var(--neutral-400);
+  line-height: 1.6;
+}
+
+.footerNav {
+  display: flex;
+  gap: var(--space-7);
+}
+
+.footerNavColumn h4 {
+  color: white;
+  margin-bottom: var(--space-3);
+  font-size: 1.125rem;
+}
+
+.footerNavColumn ul {
+  list-style: none;
+}
+
+.footerNavColumn li {
+  margin-bottom: var(--space-2);
+}
+
+.footerNavColumn a {
+  color: var(--neutral-400);
+  transition: color var(--transition-normal);
+}
+
+.footerNavColumn a:hover {
+  color: white;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--neutral-800);
+}
+
+.footerBottom p {
+  color: var(--neutral-500);
+  margin-bottom: 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--neutral-800);
+  color: var(--neutral-200);
+  font-size: 1.25rem;
+  transition: all var(--transition-normal);
+}
+
+.socialLinks a:hover {
+  background-color: var(--primary-500);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+  
+  .footerBrand {
+    max-width: 100%;
+  }
+  
+  .footerNav {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerBottom {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .footerNav {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+}

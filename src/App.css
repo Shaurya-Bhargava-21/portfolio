@@ -1,0 +1,165 @@
+/* app.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Link styles */
+.link {
+  color: var(--primary-500);
+  position: relative;
+  font-weight: 500;
+  transition: color var(--transition-normal);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-500);
+  transition: width var(--transition-normal);
+}
+
+.link:hover {
+  color: var(--primary-600);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid system */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+}
+
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+@media (max-width: 992px) {
+  .md-col-6 { grid-column: span 6; }
+  .md-col-12 { grid-column: span 12; }
+}
+
+@media (max-width: 768px) {
+  .sm-col-12 { grid-column: span 12; }
+}
+
+/* Animation utility classes */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation delay utilities */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* Add these to your existing App.css */
+.card {
+  background-color: var(--neutral-100);
+  color: var(--neutral-800);
+  transition: 
+    transform var(--transition-normal), 
+    box-shadow var(--transition-normal),
+    background-color var(--transition-slow),
+    color var(--transition-slow);
+}
+
+.dark-theme .card {
+  background-color: var(--neutral-800);
+  color: var(--neutral-200);
+}
+
+/* Ensure form elements work in dark mode */
+input,
+textarea,
+select {
+  background-color: var(--neutral-100);
+  color: var(--neutral-800);
+  border: 1px solid var(--neutral-300);
+  transition: 
+    background-color var(--transition-slow),
+    color var(--transition-slow),
+    border-color var(--transition-slow);
+}
+
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+  background-color: var(--neutral-800);
+  color: var(--neutral-200);
+  border-color: var(--neutral-600);
+}
+
+/* Add smooth transitions for theme switching */
+* {
+  transition: 
+    background-color var(--transition-slow),
+    color var(--transition-slow),
+    border-color var(--transition-slow);
+}
+
+/* Exclude elements that shouldn't transition */
+img,
+svg,
+video,
+canvas {
+  transition: none;
+}

@@ -1,0 +1,107 @@
+/* ProjectCard.module.css */
+.card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  padding-top: 60%;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlayContent {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.iconLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  color: white;
+  font-size: 1.25rem;
+  padding: var(--space-2);
+}
+
+.iconLink span {
+  font-size: 0.875rem;
+}
+
+.content {
+  padding: var(--space-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: var(--space-2);
+  color: var(--neutral-900);
+  font-size: 1.25rem;
+}
+
+.description {
+  color: var(--neutral-700);
+  margin-bottom: var(--space-3);
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--primary-50);
+  color: var(--primary-600);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
