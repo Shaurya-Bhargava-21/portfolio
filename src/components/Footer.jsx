@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
         
         <div className={styles.footerBottom}>
-          <p>&copy; {currentYear} Your Portfolio. All rights reserved.</p>
+          <p>&copy; {currentYear}Shaurya Bhargava Portfolio. All rights reserved.</p>
           
           <div className={styles.socialLinks}>
             <motion.a 

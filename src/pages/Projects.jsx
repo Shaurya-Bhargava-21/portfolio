@@ -14,6 +14,15 @@ const Projects = () => {
       repoUrl: 'https://github.com/Shaurya-Bhargava-21/MinorProject-Firebase'
     },
     {
+      title: 'Sanskriti Store',
+      description: 'A modern e-commerce platform built with Next.js and Tailwind CSS, featuring a clean design and seamless shopping experience.',
+      image: 'https://images.pexels.com/photos/7546636/pexels-photo-7546636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      technologies: ['Next.js', 'Tailwind CSS', 'Stripe', 'Vercel'],
+      category: 'web',
+      liveUrl: 'https://sanskritistore.vercel.app',
+      repoUrl: 'https://github.com/Shaurya-Bhargava-21/Sanskriti'
+    },
+    {
       title: 'MovieMania',
       description: 'A movie bookmarking app with persistent favorites management using LocalStorage.',
       image: 'https://images.pexels.com/photos/269140/pexels-photo-269140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -29,15 +38,7 @@ const Projects = () => {
       liveUrl: '#',
       repoUrl: '#'
     },
-    {
-      title: 'Sanskriti Store',
-      description: 'A modern e-commerce platform built with Next.js and Tailwind CSS, featuring a clean design and seamless shopping experience.',
-      image: 'https://images.pexels.com/photos/7546636/pexels-photo-7546636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      technologies: ['Next.js', 'Tailwind CSS', 'Stripe', 'Vercel'],
-      category: 'web',
-      liveUrl: 'https://sanskritistore.vercel.app',
-      repoUrl: 'https://github.com/Shaurya-Bhargava-21/Sanskriti'
-    }
+    
   ]
 
   return (
