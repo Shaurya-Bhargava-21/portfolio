@@ -41,15 +41,15 @@ const Home = () => {
       technologies: ['React.js', 'CSS', 'Vercel'],
       category: 'web',
       liveUrl: 'https://sanskritistore.vercel.app',
-      repoUrl: '#'
+      repoUrl: 'https://github.com/Shaurya-Bhargava-21/Sanskriti'
     },
     {
       title: 'MeantEazy',
       description: 'A role-based platform for mentors and mentees with real-time chat functionality.',
       image: 'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       technologies: ['React.js', 'Firebase', 'Authentication'],
-      liveUrl: '#',
-      repoUrl: '#'
+      liveUrl: 'https://meanteazy.vercel.app/login',
+      repoUrl: 'https://github.com/Shaurya-Bhargava-21/MinorProject-Firebase'
     },
     {
       title: 'MovieMania',
