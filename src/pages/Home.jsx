@@ -37,7 +37,7 @@ const Home = () => {
     {
       title: 'Sanskriti Store',
       description: 'A modern e-commerce platform built with .js and Tailwind CSS, featuring a clean design and seamless shopping experience.',
-      image: 'https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/7546636/pexels-photo-7546636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       technologies: ['React.js', 'CSS', 'Vercel'],
       category: 'web',
       liveUrl: 'https://sanskritistore.vercel.app',
