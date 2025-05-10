@@ -127,7 +127,7 @@ const Contact = () => {
               <span>LinkedIn</span>
             </motion.a>
             <motion.a
-              href="https://www.instagram.com/your_username_here/"
+              href="https://www.instagram.com/_shaurya_bhargava_/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
